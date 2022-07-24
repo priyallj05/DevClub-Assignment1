@@ -1,0 +1,392 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* body,html{
+    height: 100vh;
+    width: 100vh;
+}
+
+#intropg{
+    
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    background-image: url("img1.png");
+    background-size: cover;
+    
+} */
+
+#nav{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+}
+
+#navlist{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 1em;
+    margin: auto;
+}
+#navlist li{
+    padding: 1em 3em;
+}
+#navlist li a{
+    
+    padding: 0.7em 1em;
+    
+    text-decoration: none;
+    color: #e8afce;
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 2em;
+    transition: 0.5s ease-in-out;
+}
+
+#navlist li a:hover{
+    font-size: 3em;
+    font-weight: 900;
+}
+
+#Home{
+    margin: auto;
+    padding: 2em 1em 2em;
+    /* background-color: black; */
+    background-image: url('virus.jpg');
+    background-size: cover;
+    /* background-blend-mode: hue; */
+    height: 100vh;
+    /* width:100vw */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Home h1,#Home h2{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+#Tips{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+}
+#Tips div{
+    /* height: 50vh; */
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    align-items: center;
+    margin: 1em 1em;
+    border: #750550 solid 0.4em;
+    border-radius: 5em;
+    
+}
+#Tips img{
+    height: 40vh;
+    width: 30vw;
+}
+#Tips h1{
+    color: #750550;
+    color: white;
+    font-size: 6vw;
+    letter-spacing: 0.5vw;
+    font-weight: bold;
+    padding-top: 1vh;
+}
+#Tips h2{
+    color: #e8afce;
+    font-size: 6vw;
+    padding: 10vw;
+}
+#Symptoms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #750550;
+}
+#Symptoms h1{
+    color: white;
+    font-size: 10vh;
+    padding-top: 4vh;
+}
+#table{
+    background-color: #e8afce;
+    table-layout: fixed;
+    width: 60vw;
+    height: 80vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-collapse: collapse;
+    /* border:  solid black 3px; */
+    /* border-radius: 10%; */
+    
+    /* border: 3px solid black; */
+    /* border-radius: 3px; */
+}
+/* #table th:nth-of-type(1){
+    width: 20vw;
+}
+#table th:nth-of-type(2){
+    width: 20vw;
+}
+#table th:nth-of-type(3){
+    width: 40vw;
+} */
+/* td, th {
+    border-left:solid black 3px;
+    border-top:solid black 3px;
+}
+
+th {
+    background-color: blue;
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+} */
+
+#table th,td{
+    padding: 1vw;
+    width: 15vw;
+    text-align: center;
+    color: black;
+    border: black solid 4px;
+    /* border-radius: 10%; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    font-size: 4vh;
+    padding: auto;
+    padding-top: 6vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+#table th:last-of-type{
+    width: 30vw;
+}
+/* #table th{
+    border-top: none;
+} */
+#table th{
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 5vh;
+    padding-top: 2vh;
+
+}
+#table thead{
+    background-color: #e8afce;
+    background-color: #DD87B6;
+}
+#faq{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    /* width: 100vh; */
+}
+.faqs {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 8vh;
+    /* display: inline; */
+}
+.flipcard{
+    background-color: transparent;
+  width: 20vw;
+  height: 70vh;
+  /* border: 1px solid #750550; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* perspective: 1000px; */
+}
+.flipcardinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.2s ease-in-out;
+    transform-style: preserve-3d;
+    /* margin-left: 3vw; */
+    
+    /* margin-left: 5vh;
+    margin-top: 5vh; */
+    /* border: 5px solid #750550; */
+  }
+  .flipcard:hover .flipcardinner {
+    transform: rotateX(180deg);
+  }
+  .flipcardfront, .flipcardback {
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 3vh;
+    border: 7px solid #750550;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  /* .flipcardfront {
+    background-color: black;
+    color: #750550;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-size: 1vh;
+  } */
+  
+  
+  /* Style the back side */
+  .flipcardfront {
+    background-color: #750550;
+    color: #e8afce;
+    /* transform: rotateX(180deg); */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* padding: 2vh; */
+  }
+  .flipcardback {
+    background-color: #750550;
+    color: #e8afce;
+    transform: rotateX(180deg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+#YouTube{
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #750550;
+}
+#YouTube h1{
+    color: white;
+    font-size: 18vh;
+    font-weight: bold;
+    padding: 10vh;
+}
+#YouTube iframe{
+    width:50vw;
+    height:50vh
+}
+
+footer{
+    background-color: black;
+    color: #e8afce;
+    font-weight: 600;
+    height: 30vh;
+    font-size: 6vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* text-decoration: underline; */
+    
+}
+#footer h1{
+    padding: 2vh;
+    margin: 2vh;
+} 
+footer h2 a{
+    font-size: 4vh;
+    text-decoration: none;
+    color: #e8afce;
+    padding: 2vh;
+    margin: 2vh;
+    /* margin-top:none; */
+    border: #750550 solid 0.5vh;
+    transition: 0.8s ease-in-out;
+    background-color: #750550;
+    border-radius: 3vh;
+
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h2 a:hover{
+    font-size: 5vh
+}
