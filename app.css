@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +18,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -46,20 +40,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* body,html{
-    height: 100vh;
-    width: 100vh;
-}
-
-#intropg{
-    
-    height: 100vh;
-    width: 100vh;
-    position: absolute;
-    background-image: url("img1.png");
-    background-size: cover;
-    
-} */
 
 #nav{
     background-color: black;
@@ -68,51 +48,128 @@ table {
     width: 100vw;
     position: fixed;
     z-index: 10;
+    /* overflow: auto; */
+    
 }
+/* .nav .icon {
+    display: none;
+  } */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* @media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.icon {
+      /* float: right; 
+      display: flex;
+      flex-direction: column;
+    }
+  } */
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally)
+  @media screen and (max-width: 600px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      /* float: none; 
+      display: flex;
+      flex-direction: column;
+      /* text-align: left; 
+    }
+  } */
 
 #navlist{
     display: flex;
     justify-content: space-evenly;
-    padding: 1em 1em;
+    padding: 2vw 2vw;
     margin: auto;
 }
 #navlist li{
-    padding: 1em 3em;
+    padding: 2vw 4vw;
 }
 #navlist li a{
     
-    padding: 0.7em 1em;
-    
+    padding: 1vw 1vw;    
     text-decoration: none;
     color: #e8afce;
     font-family: monospace;
     font-weight: 800;
-    font-size: 2em;
+    font-size: 2vw;
     transition: 0.5s ease-in-out;
 }
 
 #navlist li a:hover{
-    font-size: 3em;
+    font-size: 4vw;
     font-weight: 900;
 }
+@media (min-width:700px){
+    #navlist li a{
+        font-size: 2vw;
+        padding: 0.5vw 0.5vw;
+    }
+    #navlist li{
+        padding: 1vw 3vw;
+    }
+    #navlist{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1vw 1vw;
+        margin: auto;
+    }
+    #navlist li a:hover{
+        font-size: 3vw;
+        font-weight: 900;
+    }
+
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+/* input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APPLYING MEDIA QUERIES 
+   @media (max-width: 768px) {
+   
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }} */
 
 #Home{
     margin: auto;
     padding: 2em 1em 2em;
-    /* background-color: black; */
     background-image: url('virus.jpg');
     background-size: cover;
-    /* background-blend-mode: hue; */
+    /* background-repeat: no-repeat; */
     height: 100vh;
-    /* width:100vw */
+    /* width: 100vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+@media (max-width:700px){
+    #Home{
+    /* background-size: cover; */
+    height: 80vh;
+    /* width:100vw; */
+
+}
+}
 #Home h1,#Home h2{
     color: white;
-    font-size: 3em;
+    font-size: 4vw;
     text-align: center;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
@@ -122,10 +179,8 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 100vw; */
 }
 #Tips div{
-    /* height: 50vh; */
     display: flex;
     justify-content: center;
     width: 80vw;
@@ -135,9 +190,21 @@ table {
     border-radius: 5em;
     
 }
+
+
 #Tips img{
     height: 40vh;
     width: 30vw;
+}
+@media (max-width:700px){
+    #Tips div{
+        width: 60vw;
+    }
+    #Tips img{
+        height: 30vh;
+        width: 20vw;
+    }
+
 }
 #Tips h1{
     color: #750550;
@@ -161,74 +228,42 @@ table {
 }
 #Symptoms h1{
     color: white;
-    font-size: 10vh;
+    font-weight: bold;
+    font-size: 5vw;
     padding-top: 4vh;
 }
 #table{
     background-color: #e8afce;
     table-layout: fixed;
     width: 60vw;
-    height: 80vh;
+    height: 40vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
     border-collapse: collapse;
-    /* border:  solid black 3px; */
-    /* border-radius: 10%; */
-    
-    /* border: 3px solid black; */
-    /* border-radius: 3px; */
 }
-/* #table th:nth-of-type(1){
-    width: 20vw;
-}
-#table th:nth-of-type(2){
-    width: 20vw;
-}
-#table th:nth-of-type(3){
-    width: 40vw;
-} */
-/* td, th {
-    border-left:solid black 3px;
-    border-top:solid black 3px;
-}
-
-th {
-    background-color: blue;
-    border-top: none;
-}
-
-td:first-child, th:first-child {
-     border-left: none;
-} */
 
 #table th,td{
     padding: 1vw;
     width: 15vw;
     text-align: center;
     color: black;
-    border: black solid 4px;
-    /* border-radius: 10%; */
+    border: black solid 0.4vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
-    /* text-transform: uppercase; */
-    font-size: 4vh;
+    font-size: 2vw;
     padding: auto;
-    padding-top: 6vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    padding-top: 3vw;
+    
 }
 #table th:last-of-type{
     width: 30vw;
 }
-/* #table th{
-    border-top: none;
-} */
+
 #table th{
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 5vh;
-    padding-top: 2vh;
+    font-size: 2.5vw;
+    padding-top: 1vw;
 
 }
 #table thead{
@@ -242,25 +277,24 @@ td:first-child, th:first-child {
     align-items: center;
     background-color: black;
     height: 100vh;
-    /* width: 100vh; */
+    
 }
 .faqs {
     color: white;
     background-color: black;
+    font-weight: bold;
     text-align: center;
-    font-size: 8vh;
-    /* display: inline; */
+    font-size: 4vw;
+    
 }
 .flipcard{
     background-color: transparent;
   width: 20vw;
   height: 70vh;
-  /* border: 1px solid #750550; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* perspective: 1000px; */
 }
 .flipcardinner {
     position: relative;
@@ -269,11 +303,6 @@ td:first-child, th:first-child {
     text-align: center;
     transition: transform 1.2s ease-in-out;
     transform-style: preserve-3d;
-    /* margin-left: 3vw; */
-    
-    /* margin-left: 5vh;
-    margin-top: 5vh; */
-    /* border: 5px solid #750550; */
   }
   .flipcard:hover .flipcardinner {
     transform: rotateX(180deg);
@@ -288,65 +317,106 @@ td:first-child, th:first-child {
     border-radius: 3vh;
     border: 7px solid #750550;
   }
-  
-  /* Style the front side (fallback if image is missing) */
-  /* .flipcardfront {
-    background-color: black;
-    color: #750550;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    font-size: 1vh;
-  } */
-  
-  
-  /* Style the back side */
+
   .flipcardfront {
     background-color: #750550;
     color: #e8afce;
-    /* transform: rotateX(180deg); */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 5.5vh;
+    font-size: 2.8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    /* padding: 2vh; */
   }
   .flipcardback {
     background-color: #750550;
     color: #e8afce;
     transform: rotateX(180deg);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3vh;
+    font-size: 1.3vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
+  @media (max-width:800px){
+    #faq{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color: black;
+        height: 100vh;
+        
+    }
+    .flipcard{
+      
+      width: 80vw;
+      height: 15vh;
+      
+    }
+    .faqs {
+        
+        font-size: 4vw;
+        
+    }
+    .flipcardfront {
+        background-color: #750550;
+        color: #e8afce;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+      .flipcardback {
+        background-color: #750550;
+        color: #e8afce;
+        transform: rotateX(180deg);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+  }
 #YouTube{
     height: 100vh;
-    /* width: 100vw; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     background-color: #750550;
 }
 #YouTube h1{
-    color: white;
-    font-size: 18vh;
+    color: #e8afce;
+    font-size: 7vw;
     font-weight: bold;
-    padding: 10vh;
+    padding: 7vh;
 }
 #YouTube iframe{
     width:50vw;
-    height:50vh
+    height:50vh;
+}
+#Hospitals{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DD87B6;
+}
+#Hospitals h1{
+    color: #750550;
+    font-size: 5vw;
+    font-weight: bold;
+    padding: 7vh;
+}
+#map{
+    width:70vw;
+    height:50vh;
 }
 
 footer{
@@ -359,9 +429,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    /* text-decoration: underline; */
-    
+    justify-content: space-evenly;   
 }
 #footer h1{
     padding: 2vh;
@@ -371,22 +439,37 @@ footer h2 a{
     font-size: 4vh;
     text-decoration: none;
     color: #e8afce;
-    padding: 2vh;
-    margin: 2vh;
-    /* margin-top:none; */
-    border: #750550 solid 0.5vh;
+    padding: 1vw;
+    margin: 1vw;
+    /* border: #750550 solid 0.5vh; */
     transition: 0.8s ease-in-out;
     background-color: #750550;
-    border-radius: 3vh;
+    border-radius: 1.5vw;
 
 }
 footer div{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
 footer h2 a:hover{
     font-size: 5vh
+}
+@media (max-width:700px){
+    footer{
+        font-size: 3vw;
+        height: 15vh;
+    }
+    #footer h1{
+        padding: 0.5vh;
+        margin: 0.5vh;
+    } 
+    footer h2 a{
+        font-size: 2vw;
+        /* border-radius: 0.5vw; */
+    }
+    
+
 }
